@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function f(){
+            src = "logo.png";
+            exp = /l/;
+            console.log(exp.test(src));
+        }
+    </script>
+</head>
+<body onLoad = "f()">
+    <nav>
+        <ul>
+            <a href = "liste.html"><li >Accueil</li></a>
+            <a href="panier.html"><li >Voir le panier</li></a>
+            <a href="test.html"><li >page test</li></a>
+        </ul>
+    </nav>
+    <label for="couleur">Choisissez une couleur:</label>
+    <select name="couleur" id="couleur-select">
+        <option value="choix 1">Choix 1</option>
+        <option value="choix 2">Choix 2</option>
+        <option value="choix 3">Choix 3</option>
+ 
+    </select>
+    <!--<script src = "./js/produit.js"></script>
+    <script src = "./js/panier.js"></script>-->
+
+
+</body>
+</html>

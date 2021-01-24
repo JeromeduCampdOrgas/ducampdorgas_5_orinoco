@@ -1,0 +1,266 @@
+body{
+    width: 100%;
+    box-sizing: border-box;
+}
+header{
+    width:100%;
+}
+#banniere {
+    position:relative;
+    text-align: center;
+}
+#logo{
+    max-width:95%;
+}
+/**********************************/
+/*Menu*/
+#navigation{
+    text-align:center;
+    font-weight:bold;
+}
+ul{
+display:flex;
+margin:auto;
+}
+ul a,li{
+    text-decoration:none;
+    list-style-type:none;
+    margin:10px auto 10px auto;
+    padding:5px;
+    color:#000;
+}
+ul a:hover > li{
+    background:grey;
+    color:#fff;
+    border-radius:15px;
+}
+/**********************************/
+/*footer*/
+footer{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;  
+    background-color:#f2f2f2;
+    width:95%;
+}
+.footerElement h3{
+    margin-left:0.5em;
+    padding:0;
+}
+.footerElement ul{
+    display:flex;
+    flex-direction:column;
+    margin-left:0;
+    padding:0;
+}
+#footer ul li{
+    padding:0 0 10px 0;
+    margin-left:0;
+}
+
+
+/**********************************/
+/*Liste.html*/
+/*Main*/
+main{
+    width:100%;
+    margin:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    margin:auto;    
+}
+/*presentation produits*/
+h1{
+    width:100%;
+    text-align:center;
+}
+.newProduct{
+    margin:auto;
+}
+.newProduct :hover{
+    transform:scale(1.02);
+}
+.product{
+    width:95%;
+}
+.product p{
+    text-align:left;
+    border-radius:0 0 15px 15px;
+}
+#listProducts{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    width:100%;
+}
+.lienImg{
+    text-decoration:none;
+    box-shadow: 2px 2px 2px 2px #eee;
+    color:#000;
+    border-radius:15px 15px 15px 15px;
+}
+#selection{
+    display:flex;
+    flex-direction:column;
+    margin:15px; 
+    background-color:#f2f2f2;
+}
+#selection p{
+    text-align:center;
+    font-weight:bold;
+}
+
+
+/**********************************/
+/*produit.html*/
+
+#panier{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    flex-wrap:nowrap;
+    width:100%;
+
+}
+#gestionPanier{
+    text-align:center;
+
+}
+
+
+
+
+/**********************************/
+  #cart{
+      position: absolute;
+      right: 20px;
+
+}
+#nbCart{
+    color:#fff;
+    font-weight:bold;
+    position: absolute;
+    top:9px;
+    right: 38px;
+    z-index:2;
+}
+
+p{
+
+    border-radius:0 0 15px 15px;
+    text-align:center;
+}
+.imgProduct{
+    width:200px;
+    height:200px;
+    border-radius:15px 15px 0 0;
+}
+.detailImg{
+    border-radius:15px 15px 0 0;
+    width :250px;
+    height :250px;
+}
+
+
+.colorChoice{
+    border-radius:0 0;
+}
+.colorChoice:hover{
+    cursor: pointer;
+}
+
+/****************************************************************************/
+table{
+    width:95%;
+}
+table,
+td,tr {
+    border: 1px solid #333;
+    border-collapse: collapse;
+}
+
+thead,
+tfoot {
+    border-collapse: collapse;
+    background-color: #333;
+    color: #fff;
+}
+.submit{
+    width:20%;
+
+}
+.ajout,.retrait{
+    width:30px;
+    border:1px black solid;
+}
+/****************************************************/
+#command{
+    /*display:none;*/
+    padding: 15px;
+    border:1px black solid;
+    box-shadow: 5px 5px 5px #bbb;
+    border-radius:15px;
+}
+#command h2{
+    width:100%;
+    text-align:center;
+}
+.formulaire{
+    text-align:left;
+    margin:15px;
+}
+#renseignements{
+    display:flex;
+    flex-direction:column;
+    margin:auto;
+    width:95%;
+}
+#renseignement label,input{
+    margin:10px;
+}
+#renseignements input{
+    max-width:65%;
+}
+#bouton_envoi{
+    margin:auto;
+    width:80px;
+}
+
+
+
+
+
+/*******************************/
+
+@media screen and (min-width: 640px) {
+    #listProducts{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-around;
+        width:100%;
+    }
+    #footer{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-around;
+        width:100%;
+        background:#ddd;
+        border-radius:0 0 15px 15px;
+    }
+    #command{
+        width:80%;
+        margin:auto;
+    }
+    #renseignements{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        width:95%;
+    }
+    #civilite,#adresse{
+        padding:15px;
+        width:45%;
+    }
+
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <title>Commande</title>
+</head>
+<body>
+
+    <header id ="banniere">
+        <img  id = "logo" src="./images/logo-resize.jpg" alt="Orinoco, vente de produits en ligne, nounours, cameras vintage, meubles en bois">
+        <!--<span id = "nbCart"></span><i class = "fas fa-shopping-cart fa-3x" id = "cart"></i>-->
+    </header>  
+    <nav>
+        <ul>
+            <a href = "liste.html"><li >Accueil</li></a>
+            <a href="panier.html"><li >Voir le panier</li></a>
+            <a href="test.html"><li >page test</li></a>
+        </ul>
+    </nav>
+    <h1 id = "productName"></h1>
+    <p id = "productRef"></p>
+    <div id = "product">
+        <div class = "product">
+
+            <div id = "gestionPanier">
+                <div id = "panier">  
+                            
+                    <div>
+                        <img id = "productImg" src="" alt="" style = "width:200px;height:200px;">
+                    </div>
+                     
+                    <div >
+                        <h3>Panier</h3> 
+                        <button class = "submitProduct" type="submit" onclick="ajoutPanier()">+</button>
+                        <p id = "nombre" class = "nbCart">0</p>
+                        <button class = "submitProduct" type="submit" onclick="retraitPanier()">-</button>
+                    </div>
+                </div>
+                <div id = "selection">
+                    <p id = "personalisation"></p>
+                    <label for="couleur">Choisissez une couleur:</label>
+            
+                        <select name="couleur" id="couleur-select">
+            
+                        </select>
+                </div> 
+                <div id = "voirPanier">
+                    
+                    <a href="panier.html"><button class = "submit" type="submit" onclick="voirPanier()" >Voir le panier</button></a>
+                    <button class = "submit" onclick = "viderPanier()">Nettoyer panier</button>
+                </div>
+            </div>
+        </div>
+        <div class = "product">
+            <p >prix:<span id = "productPrice"></span>€</p>
+            <p id = "productDescription"></p>
+            
+        </div>
+    </div>
+
+        <footer id = "footer">       
+            <div id ="about" class = "footerElement">
+                <h3>A propos</h3>
+                <ul>
+                    <li><a href="#">Fonctionnement du site</a></li>
+                    <li><a href="#">Conditions générales de vente</a></li>
+                    <li><a href="#">Données et confidentialité</a></li>
+                </ul>
+            </div>
+            
+            <div id ="assistance" class = "footerElement">
+                <h3>Assistance</h3>
+                <ul>
+                    <li><a href="#">Centre d'aide</a></li>
+                    <li><a href="#">Nous contacter</a></li>
+                </ul>
+            </div>
+        
+    </footer>
+    <script src = "./js/produit.js"></script>
+    <script src = "./js/panier.js"></script>
+
+        
+
+</body>
+</html>
