@@ -3,18 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+    <header id ="banniere">
+        <img  id = "logo" src="./images/logo-resize.jpg" alt="Orinoco, vente de produits en ligne, nounours, cameras vintage, meubles en bois">
+    </header>   
+    <nav>
+        <ul>MENU
+            <a href = "liste.html"><li >Accueil</li></a>
+            <a href="panier.html"><li >Voir le panier</li></a>
+            <a href="confirmation.html"><li >Confirmation</li></a>
+            <a href="test.html"><li >page test</li></a>
+        </ul>
+    </nav>
     <div>
-        <p id = "nom">xx</p>
+        <h1>Confirmation de commande</h1>
+        <p>Nous vous remercions de votre confiance et vous confirmons que votre commande n°
+            <span id = "idCommand"></span> <br> a 
+            bien été enregistrée pour un montant total de <span id = "totalMontant"></span>.</p>
+  
     </div>
 
 
 
+    <script src = "./js/confirmation.js"></script>
 
-<script src = "./js/confirmation.js">
 
-</script>
 </body>
 </html>

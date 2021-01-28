@@ -1,42 +1,47 @@
-//Récupération du panier complet
-let panier = [];
-let articles = [];
-let detail = [];
-let grandTotal = 0;
-let nbArticles = 0
-//Récupération des clés du localStorage => articles(array)
-for(let i = 0;i < localStorage.length;i++){
-    let lsKey = localStorage.key(i);
-    articles.push(lsKey)
-}
-for(let elem of articles){
-    let article = JSON.parse(localStorage.getItem(elem))
-    panier.push(article)
-}
-//**************************** */
-//Création du tableau récapitulatif
-tbody = document.getElementById("tbody");
 
-for(let elem of panier){
-    for(let ligne of elem){
-        //Récupération des infos par produit
-        let productName = ligne.nom;
-        let productRef = ligne._id;
-        let productColor = ligne.couleur;
-        let productQty = ligne.quantity;
-        let productPrice = parseInt(ligne.prix);
-        let productTotal = productQty * productPrice;
-        
-        //Création et insertion d'une ligne par article
-        let ligneArticle = document.createElement('tr');
-        tbody.appendChild(ligneArticle);
-            //création d'une colonne par info article
-           let colName = document.createElement('th');
-           let colRef = document.createElement('th');
-           let colColor = document.createElement('th');
-           let colQty = document.createElement('th');
-           let colPrice = document.createElement('th');
-           let colTotal = document.createElement('th');
+//affichePanier();
+
+//function panier(){
+    //Récupération du panier complet
+    let panier = [];
+    let articles = [];
+
+    //Récupération des clés du localStorage => articles(array)
+    for(let i = 0;i < localStorage.length;i++){
+        let lsKey = localStorage.key(i);
+        articles.push(lsKey)
+    }
+    for(let elem of articles){
+        let article = JSON.parse(localStorage.getItem(elem))
+        panier.push(article);
+    }
+//}
+//panier();
+//**************************** */
+
+//Création du tableau récapitulatif
+function tableauRecap(){
+    tbody = document.getElementById("tbody");    
+    let grandTotal = 0;
+    let nbArticles = 0
+    for(let elem of panier){
+        for(let ligne of elem){
+            //Récupération des infos par produit
+            let productName = ligne.nom;
+            let productColor = ligne.couleur;
+            let productQty = ligne.quantity;
+            let productPrice = parseInt(ligne.prix);
+            let productTotal = productQty * productPrice;
+            
+            //Création et insertion d'une ligne par article
+            let ligneArticle = document.createElement('tr');
+            tbody.appendChild(ligneArticle);
+                //création d'une colonne par info article
+            let colName = document.createElement('th');
+            let colColor = document.createElement('th');
+            let colQty = document.createElement('th');
+            let colPrice = document.createElement('th');
+            let colTotal = document.createElement('th');
 
             //Renseignement des infos
             colName.innerHTML = productName;
@@ -53,14 +58,14 @@ for(let elem of panier){
             ligneArticle.appendChild(colPrice);
             ligneArticle.appendChild(colTotal); 
 
-    grandTotal = parseInt(grandTotal) + productTotal;
-    nbArticles = nbArticles  + productQty
-    } 
-}  
+            grandTotal = parseInt(grandTotal) + productTotal;
+            nbArticles = nbArticles  + productQty
+        } 
+    }  
 
-let totalAPayer =document.getElementById('total');
-totalAPayer.innerHTML = grandTotal.toLocaleString() + " €";
+    let totalAPayer =document.getElementById('total');
+    totalAPayer.innerHTML = grandTotal.toLocaleString() + " €";
+}
 
-
-
+tableauRecap();
 

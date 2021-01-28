@@ -26,7 +26,7 @@ ul a,li{
     text-decoration:none;
     list-style-type:none;
     margin:10px auto 10px auto;
-    padding:5px;
+    padding:10px;
     color:#000;
 }
 ul a:hover > li{
@@ -72,18 +72,19 @@ main{
 }
 /*presentation produits*/
 h1{
-    width:100%;
     text-align:center;
 }
+
 .newProduct{
     margin:auto;
+    padding:3px;
+    box-shadow: 2px 1px 1px 1px #eee;
+    border-radius:15px;
 }
 .newProduct :hover{
     transform:scale(1.02);
 }
-.product{
-    width:95%;
-}
+
 .product p{
     text-align:left;
     border-radius:0 0 15px 15px;
@@ -96,13 +97,70 @@ h1{
 }
 .lienImg{
     text-decoration:none;
-    box-shadow: 2px 2px 2px 2px #eee;
+    /*box-shadow: 2px 2px 2px 2px #eee;*/
     color:#000;
     border-radius:15px 15px 15px 15px;
+}
+
+
+
+/**********************************/
+/*produit.html*/
+#presProduct{
+    margin:auto;
+}
+#product{
+    width:70%;
+    margin:auto;
+    border:1px #bebebe solid;
+    border-radius:15px;
+}
+.product{
+    width:70%;
+    
+    margin:auto;
+}
+#panier{
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    flex-wrap:nowrap;
+    width:100%;
+}
+
+#gestionPanier{
+    text-align:center;
+}
+#compteurPanier{
+    position:absolute;
+    bottom:0;
+    right:15px;
+    width:150px;
+    height:55px;
+    border:1px #bebebe solid;
+    padding:0px 2px;
+    border-radius:15px;
+}
+#compteurPanier h3{
+    margin:auto;
+}
+#nombre{
+    margin:auto;
+    text-align:center;
+}
+
+#boutons{
+    width:150px;
+    height:20px;
+    display:flex;
+    justify-content:space-between;
+    background:grey;
 }
 #selection{
     display:flex;
     flex-direction:column;
+    justify-content:space-between;
     margin:15px; 
     background-color:#f2f2f2;
 }
@@ -110,26 +168,6 @@ h1{
     text-align:center;
     font-weight:bold;
 }
-
-
-/**********************************/
-/*produit.html*/
-
-#panier{
-    display:flex;
-    flex-direction:row;
-    justify-content:space-around;
-    flex-wrap:nowrap;
-    width:100%;
-
-}
-#gestionPanier{
-    text-align:center;
-
-}
-
-
-
 
 /**********************************/
   #cart{
@@ -196,7 +234,7 @@ tfoot {
 }
 /****************************************************/
 #command{
-    /*display:none;*/
+    display:none;
     padding: 15px;
     border:1px black solid;
     box-shadow: 5px 5px 5px #bbb;
@@ -244,6 +282,7 @@ tfoot {
         display:flex;
         flex-direction:row;
         justify-content:space-around;
+        margin-top:25px;
         width:100%;
         background:#ddd;
         border-radius:0 0 15px 15px;

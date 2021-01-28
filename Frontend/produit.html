@@ -18,50 +18,53 @@
         <ul>
             <a href = "liste.html"><li >Accueil</li></a>
             <a href="panier.html"><li >Voir le panier</li></a>
-            <a href="test.html"><li >page test</li></a>
         </ul>
     </nav>
-    <h1 id = "productName"></h1>
-    <p id = "productRef"></p>
-    <div id = "product">
-        <div class = "product">
+    <section id = "presProduct">
 
-            <div id = "gestionPanier">
-                <div id = "panier">  
+        <div id = "product">        
+            <h1 id = "productName"></h1>
+            <p id = "productRef"></p>
+                <div class = "product">
+
+                    <div id = "gestionPanier">
+                        <div id = "panier">  
+                                    
+                            <div id = "imageProduct">
+                                <img id = "productImg" src="" alt="" style = "height:200px;">
+                            </div>
                             
-                    <div>
-                        <img id = "productImg" src="" alt="" style = "width:200px;height:200px;">
-                    </div>
-                     
-                    <div >
-                        <h3>Panier</h3> 
-                        <button class = "submitProduct" type="submit" onclick="ajoutPanier()">+</button>
-                        <p id = "nombre" class = "nbCart">0</p>
-                        <button class = "submitProduct" type="submit" onclick="retraitPanier()">-</button>
+                            <div id = "compteurPanier">
+                                <h3>Panier</h3> 
+                                <div id = "boutons">
+                                    <button class = "submitProduct" type="submit" onclick="ajoutPanier()">+</button>
+                                    <p id = "nombre" class = "nbCart">0</p>
+                                    <button class = "submitProduct" type="submit" onclick="retraitPanier()">-</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id = "selection">
+                            <p id = "personalisation"> </p>
+                            <p id = colorSelection>
+                                <label for="couleur">Choisissez une couleur:</label>          
+                                <select name="couleur" id="couleur-select"> 
+                                </select>
+                            </p>
+                        </div> 
+                        <div id = "voirPanier">
+                            
+                            <a href="panier.html"><button class = "submit" type="submit" onclick="voirPanier()" >Voir le panier</button></a>
+                            <button class = "submit" onclick = "viderPanier()">Vider panier</button>
+                        </div>
                     </div>
                 </div>
-                <div id = "selection">
-                    <p id = "personalisation"></p>
-                    <label for="couleur">Choisissez une couleur:</label>
-            
-                        <select name="couleur" id="couleur-select">
-            
-                        </select>
-                </div> 
-                <div id = "voirPanier">
+                <div class = "product">
+                    <p style ="font-weight:bold;">Prix:<span id = "productPrice"></span>€</p>
+                    <p id = "productDescription"></p>
                     
-                    <a href="panier.html"><button class = "submit" type="submit" onclick="voirPanier()" >Voir le panier</button></a>
-                    <button class = "submit" onclick = "viderPanier()">Nettoyer panier</button>
                 </div>
             </div>
-        </div>
-        <div class = "product">
-            <p >prix:<span id = "productPrice"></span>€</p>
-            <p id = "productDescription"></p>
-            
-        </div>
-    </div>
-
+    </section>  
         <footer id = "footer">       
             <div id ="about" class = "footerElement">
                 <h3>A propos</h3>

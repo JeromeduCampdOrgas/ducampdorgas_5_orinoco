@@ -109,8 +109,7 @@ function voirPanier(){
     let lsKey = localStorage.key(i);
     let panier = localStorage.getItem(lsKey);
     panier.push(panier);
-    }
-    
+    }   
 }
 
 function viderPanier(){

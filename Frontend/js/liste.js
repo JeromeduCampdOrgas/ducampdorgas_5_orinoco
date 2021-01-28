@@ -5,10 +5,13 @@
             for(let elem of nounours){
                 const newProduct = document.createElement('div');
                 newProduct.setAttribute('class','newProduct');
+
                  const newLien = document.createElement("a");
                  newLien.setAttribute("class","lienImg");
+
                  const newImg = document.createElement("img");
                  newImg.setAttribute("class","detailImg");
+
                  const newParagraph = document.createElement("p");
                  newParagraph.innerHTML = elem.name;
                  newImg.setAttribute("src",elem.imageUrl);
@@ -18,7 +21,7 @@
                  parentLien.appendChild(newProduct);
                  newProduct.appendChild(newLien);
                  newLien.appendChild(newImg);
-                 newLien.appendChild(newParagraph);
+                 newProduct.appendChild(newParagraph);
              }
          }
         
