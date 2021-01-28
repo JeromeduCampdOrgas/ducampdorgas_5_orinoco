@@ -7,15 +7,10 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const idProduct = urlParams.get('id')
 
+//Requete Ajax
+fillNounours();
+  
 
-async function fillNounours() {
-    await fetch('http://localhost:3000/api/teddies') // will return info, but in wrong format
-      .then((response) => response.json()) // will return info, in json format
-      .then((nounours) => remplirListeNounours(nounours)) // main code here, using json info
-  }
-  fillNounours();
-  
-  
 const productName = document.getElementById("productName");
 const productRef = document.getElementById("productRef");
 const productImg = document.getElementById("productImg");
@@ -74,7 +69,7 @@ let volumeTest = document.getElementById('nbCart');
 
 //Modifie le volume de ce produit dans le panier en fonction du changement de couleur
 const choix = document.getElementById('couleur-select');
-choix.addEventListener('change', (event) => {
+choix.addEventListener('change', function() {
 recup();
 });
 

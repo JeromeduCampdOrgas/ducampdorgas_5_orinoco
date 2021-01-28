@@ -14,6 +14,7 @@
         <ul>MENU
             <a href = "liste.html"><li >Accueil</li></a>
             <a href="panier.html"><li >Voir le panier</li></a>
+            <a href="confirmation.html"><li >Confirmation</li></a>
             <a href="test.html"><li >page test</li></a>
         </ul>
     </nav>
@@ -47,8 +48,9 @@
         </Div>
         <button type =  "submit" onclick = "validationPanier()">Valider le panier</button>
 
-        <form class = "formulaire" name = "command" id ='command' method = "POST" action = "confirmation.html">
+        <form class = "formulaire" name = "command" id ='command' >
             <h2>Confirmation de commande</h2>
+            <p>* champs obligatoires</p>
         <div id = "renseignements">
             <div id = "civilite">
                 <h2>Renseignements</h2>
@@ -60,33 +62,38 @@
                 </select>
             <br>
 
-                <label for="name">Nom :</label>
-                <input type="text" name="name" id = "name" class = "civilite" placeholder="Nom" required>
-                <span id = "erreur"></span>
+                <label for="nom">Nom* :</label>
+                <input type="text" name="nom" id = "name" class = "civilite required" placeholder="Nom">
             <br>
-                <label for="forname">Prénom :</label>
-                <input type="text"  name="forname" id = "forname" class = "civilite" placeholder="Prénom" >
+                <label for="Prénom">Prénom* :</label>
+                <input type="text"  name="prenom" id = "firstname" class = "civilite required" placeholder="Prénom" >
+            </div>
+            <div>
+                <span id = "error"></span>
             </div>
             <div id = "adresse">
                 <h2>Adresse de livraison</h2>
                 <label for="nVoie"> n° de voie:</label>
                 <input type="text"  name="nVoie" id = "nVoie">
             <br>
-                <label for="voie" required> Rue:</label>
-                <input type="text"  name="voie" id = "voie">
+                <label for="rue"></label> Rue*:</label>
+                <input type="text"  name="rue" id = "rue"  class = "required">
+
             <br>
-                <label for="cp"> Code postal:</label>
-                <input type="text"  name="cp" id = "cp">
+                <label for="cp"> Code postal*:</label>
+                <input type="text"  name="cp" id = "cp" class = "required">
+
             <br>
-                <label for="ville">Ville:</label>
-                <input type="text" name="ville" id = "ville"> 
+                <label for="ville">Ville*:</label>
+                <input type="text" name="ville" id = "ville" class = "required"> 
+ 
             <br>
                 <label for="mail">e-mail :</label>
                 <input type="email"  name="user_mail" id = "mail">
                 <span id = "erreur_mail"></span>
             </div>
         </div>
-            <input type = "submit" value = "Valider" id = "bouton_envoi">
+            <button  type = "button" id = "bouton_envoi" onclick = "validateCart()" >Valider</button>
         </form>
 
         
@@ -110,7 +117,7 @@
             </div>
         
     </footer>
-    <script src = "./js/testbis.js"></script>
+    <script src = "./js/AffichePanier.js"></script>
     <script src = "./js/panier.js"></script>
     <script src = "./js/command.js"></script>
 </body>
