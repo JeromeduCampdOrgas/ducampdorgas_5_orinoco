@@ -1,6 +1,7 @@
 body{
     width: 100%;
     box-sizing: border-box;
+    font-size:0.8em;
 }
 header{
     width:100%;
@@ -12,6 +13,7 @@ header{
 #logo{
     max-width:95%;
 }
+
 /**********************************/
 /*Menu*/
 #navigation{
@@ -25,6 +27,7 @@ margin:auto;
 ul a,li{
     text-decoration:none;
     list-style-type:none;
+    font-weight:bold;
     margin:10px auto 10px auto;
     padding:10px;
     color:#000;
@@ -76,9 +79,8 @@ h1{
 }
 
 .newProduct{
-    margin:auto;
-    padding:3px;
-    box-shadow: 2px 1px 1px 1px #eee;
+    margin:20px auto;
+    box-shadow: 4px 3px 3px 1px #eee;
     border-radius:15px;
 }
 .newProduct :hover{
@@ -107,36 +109,36 @@ h1{
 /**********************************/
 /*produit.html*/
 #presProduct{
-    margin:auto;
+    width:95%;
+    margin:20px 10px 20px 0;
 }
 #product{
-    width:70%;
-    margin:auto;
+    width:100%;
+    margin:auto 0;
     border:1px #bebebe solid;
     border-radius:15px;
 }
 .product{
-    width:70%;
-    
+    width:95%;
     margin:auto;
+    padding:5px;
 }
 #panier{
     position:relative;
     display:flex;
-    flex-direction:row;
+    flex-direction:column;
     justify-content:space-around;
-    flex-wrap:nowrap;
+    flex-wrap:wrap;
     width:100%;
 }
-
 #gestionPanier{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
     text-align:center;
 }
 #compteurPanier{
-    position:absolute;
-    bottom:0;
-    right:15px;
-    width:150px;
+    margin:auto;
     height:55px;
     border:1px #bebebe solid;
     padding:0px 2px;
@@ -156,12 +158,38 @@ h1{
     display:flex;
     justify-content:space-between;
     background:grey;
+    margin:auto;
+}
+button,#couleur-select{
+    cursor: pointer;
+}
+
+.submit{
+    width:30%;
+    padding:10px;
+    margin:30px;
+    border-radius:15px;
+    border:none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition:transform 200ms;
+}
+.submit:hover{
+    cursor:pointer;
+    transform:scale(1.05);
+}
+.submitProduct{
+    width:30px;
+    border:1px black solid;
+}
+.submitProduct:hover{
+    background-color:palegreen;
+    font-weight:bold;
 }
 #selection{
     display:flex;
     flex-direction:column;
     justify-content:space-between;
-    margin:15px; 
+    margin:15px 0; 
     background-color:#f2f2f2;
 }
 #selection p{
@@ -170,9 +198,9 @@ h1{
 }
 
 /**********************************/
-  #cart{
-      position: absolute;
-      right: 20px;
+#cart{
+    position: absolute;
+    right: 20px;
 
 }
 #nbCart{
@@ -185,10 +213,10 @@ h1{
 }
 
 p{
-
     border-radius:0 0 15px 15px;
     text-align:center;
 }
+
 .imgProduct{
     width:200px;
     height:200px;
@@ -224,14 +252,12 @@ tfoot {
     background-color: #333;
     color: #fff;
 }
-.submit{
-    width:20%;
+
+#validerPanier{
+    margin:15px auto;
 
 }
-.ajout,.retrait{
-    width:30px;
-    border:1px black solid;
-}
+
 /****************************************************/
 #command{
     display:none;
@@ -246,7 +272,8 @@ tfoot {
 }
 .formulaire{
     text-align:left;
-    margin:15px;
+    margin:0 18px 20px 0;
+    width:86%;
 }
 #renseignements{
     display:flex;
@@ -264,6 +291,18 @@ tfoot {
     margin:auto;
     width:80px;
 }
+/*************************************************/
+#confirmation{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    justify-content:center;
+    border-radius:15px;
+    background-color:#eee;
+    margin:20px auto;
+    width:60%;
+    padding:15px;
+}
 
 
 
@@ -272,6 +311,9 @@ tfoot {
 /*******************************/
 
 @media screen and (min-width: 640px) {
+    body{
+        font-size:1em;
+    }
     #listProducts{
         display:flex;
         flex-direction:row;

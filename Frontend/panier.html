@@ -11,11 +11,9 @@
         <img  id = "logo" src="./images/logo-resize.jpg" alt="Orinoco, vente de produits en ligne, nounours, cameras vintage, meubles en bois">
     </header>   
     <nav>
-        <ul>MENU
+        <ul>
             <a href = "liste.html"><li >Accueil</li></a>
             <a href="panier.html"><li >Voir le panier</li></a>
-            <a href="confirmation.html"><li >Confirmation</li></a>
-            <a href="test.html"><li >page test</li></a>
         </ul>
     </nav>
         <Div id ="panier">
@@ -44,9 +42,10 @@
                 </tfoot>
             </table>
             <p id = "nombre"></p>
-
+<button class = "submit" id = "validerPanier" type =  "submit" onclick = "validationPanier()">Valider le panier</button>
         </Div>
-        <button type =  "submit" onclick = "validationPanier()">Valider le panier</button>
+
+        
 
         <form class = "formulaire" name = "command" id ='command' >
             <h2>Confirmation de commande</h2>
@@ -67,6 +66,10 @@
             <br>
                 <label for="Prénom">Prénom* :</label>
                 <input type="text"  name="prenom" id = "firstname" class = "civilite required" placeholder="Prénom" >
+            <br>
+                <label for="mail">e-mail :</label>
+                <input type="email"  name="user_mail" id = "mail">
+                <span id = "erreur_mail"></span>
             </div>
             <div>
                 <span id = "error"></span>
@@ -86,14 +89,11 @@
             <br>
                 <label for="ville">Ville*:</label>
                 <input type="text" name="ville" id = "ville" class = "required"> 
- 
-            <br>
-                <label for="mail">e-mail :</label>
-                <input type="email"  name="user_mail" id = "mail">
-                <span id = "erreur_mail"></span>
+
+
             </div>
         </div>
-            <button  type = "button" id = "bouton_envoi" onclick = "validateCart()" >Valider</button>
+            <button  class = "submit" type = "button" id = "bouton_envoi" onclick = "validateCart()" >Valider</button>
         </form>
 
         

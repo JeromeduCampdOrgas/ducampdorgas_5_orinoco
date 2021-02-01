@@ -18,9 +18,10 @@ async function validateCart(){
         client = sessionStorage.setItem('client',JSON.stringify(json))
        //console.log(json);
     
-    //window.location = "http://www.mozilla.org";)
+
     });
-    window.location= "confirmation.html"// ou
+    //Renvoi vers la page de confirmation
+    window.location= "confirmation.html";
        }
     
  

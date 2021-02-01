@@ -105,10 +105,15 @@ function ajoutPanier(){
     }
 
 function voirPanier(){
-    for(let i = 0;i < localStorage.length;i++){
-    let lsKey = localStorage.key(i);
-    let panier = localStorage.getItem(lsKey);
-    panier.push(panier);
+    if(localStorage.length == 0){
+       alert("Votre panier est vide");
+    }else{
+        for(let i = 0;i < localStorage.length;i++){
+        let lsKey = localStorage.key(i);
+        let panier = localStorage.getItem(lsKey);
+        /*panier.push(panier);*/
+        window.location= "panier.html";
+        }
     }   
 }
 
