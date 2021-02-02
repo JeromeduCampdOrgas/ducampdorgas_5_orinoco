@@ -4,7 +4,6 @@ async function validateCart(){
     const response = f_valid() //si le formulaire passe la validation =>
     sessionStorage.setItem('client',JSON.stringify(response))       //=> on stocke la réponse
     if(response){
-        alert(response);
         let client = sessionStorage.getItem('client');
         await fetch('http://localhost:3000/api/teddies/order',{
             method: "POST",
