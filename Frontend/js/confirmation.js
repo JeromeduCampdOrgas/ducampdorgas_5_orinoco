@@ -34,3 +34,7 @@ document.getElementById('idCommand').innerHTML = order.orderId;
 idCommand();
 localStorage.clear();
 sessionStorage.clear();
+
+function fermerConfirmation(){
+    window.location= "liste.html";
+}

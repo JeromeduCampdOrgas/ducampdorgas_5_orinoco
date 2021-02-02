@@ -150,7 +150,9 @@ function f_valid(){
         return  objetFinal;   
  } 
 
-
+function annulCommand(){
+    document.getElementById('command').style.display = "none";
+}
    
 
 

@@ -82,6 +82,7 @@ h1{
     margin:20px auto;
     box-shadow: 4px 3px 3px 1px #eee;
     border-radius:15px;
+    border:1px black solid;
 }
 .newProduct :hover{
     transform:scale(1.02);
@@ -99,7 +100,6 @@ h1{
 }
 .lienImg{
     text-decoration:none;
-    /*box-shadow: 2px 2px 2px 2px #eee;*/
     color:#000;
     border-radius:15px 15px 15px 15px;
 }
@@ -287,7 +287,15 @@ tfoot {
 #renseignements input{
     max-width:65%;
 }
-#bouton_envoi{
+#confirmForm{
+    width:60%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content:space-around;
+    margin:30px auto;
+}
+#bouton_envoi,#bouton_annule,#fermerConfirmation{
     margin:auto;
     width:80px;
 }
@@ -344,5 +352,7 @@ tfoot {
         padding:15px;
         width:45%;
     }
-
+    #confirmForm{
+        width:30%;
+    }
 }
