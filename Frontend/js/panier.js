@@ -64,7 +64,6 @@ function ajoutPanier(){
             //si le produit est dans le panier
             if(localStorage.getItem(idProduct));{
                 let panier = JSON.parse(localStorage.getItem(idProduct));
-
                 let i = colorExists(panier,couleur);
 
                 //si la couleur du produit est dans le panier

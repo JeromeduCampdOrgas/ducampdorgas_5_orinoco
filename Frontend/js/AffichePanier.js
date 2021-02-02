@@ -1,7 +1,4 @@
 
-//affichePanier();
-
-//function panier(){
     //Récupération du panier complet
     let panier = [];
     let articles = [];
@@ -15,9 +12,7 @@
         let article = JSON.parse(localStorage.getItem(elem))
         panier.push(article);
     }
-//}
-//panier();
-//**************************** */
+
 
 //Création du tableau récapitulatif
 function tableauRecap(){

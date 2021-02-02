@@ -300,6 +300,7 @@ tfoot {
     border-radius:15px;
     background-color:#eee;
     margin:20px auto;
+    line-height: 2em;
     width:60%;
     padding:15px;
 }

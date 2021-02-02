@@ -26,10 +26,10 @@ function calculTotal(){
 }
 calculTotal();
 function idCommand(){
-  console.log(sessionStorage)
+  //console.log(sessionStorage)
 let order = JSON.parse(sessionStorage.getItem('client'));
 document.getElementById('idCommand').innerHTML = order.orderId;
-    console.log(order.orderId);  
+    //console.log(order.orderId);  
 }
 idCommand();
 localStorage.clear();
