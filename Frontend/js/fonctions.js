@@ -1,10 +1,9 @@
-function panierVide(){
-    let lienPanier = document.getElementById('voirPanier');
-    lienPanier.addEventListener('click',function(e){
-        if(localStorage.length == 0){  
-            e.preventDefault();
-            console.log("Votre panier est vide");
-            
-        }
-    })
-}
+//Si le panier est vide le lien vers la page est désactivé
+    document.getElementById("voirPanier").onclick = function() {
+            if(localStorage.length ===0){  
+            return false;
+         }
+        } 
+    
+
+
