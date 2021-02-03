@@ -1,126 +1,67 @@
-function ajoutPanier(){
-     //Récupération du nom
-        let nom = document.getElementById("productName").innerHTML;
-     //Récupération de la couleur sélectionnée
-        let couleur = document.getElementById("couleur-select").value;
-     //Récupération du prix
-        let prix = document.getElementById("productPrice").textContent;
-        let produit ={
-            idProduct,nom,couleur,prix
-        }
-        let panier = [];
-        let volume = document.getElementById('nombre');
-        if(localStorage.length == 0){
-            produit.quantity = 1;
-            panier.push(produit);
-            localStorage.setItem(idProduct,JSON.stringify(panier)); 
-            volume.innerHTML = produit.quantity;
-        }else{
-            if(localStorage.getItem(idProduct)){
-                panier = JSON.parse(localStorage.getItem(idProduct));
-                //Récupération du ré&sulta de colorExists sous forme de variable
-                let i = colorExists(panier,couleur);
+//Récupération du panier complet
+let panier = [];
+let articles = [];
 
-                if(i !== false ){
-                    //si même produit même couleur on ajoute 1 à quantity 
-                        produit.quantity = panier[i]['quantity']+=1;
-                    //supression de l'objet en index i
-                        panier.splice(i,1);
-                    //on écrit la nouvelle quantité sur la page      
-                        volume.innerHTML = produit.quantity;
-                    //on push le produit modifié dans le panier
-                        panier.push(produit);
-                    //on stocke le nouveau prosduit dans le localStorage
-                        localStorage.setItem(idProduct,JSON.stringify(panier));                                  
-                }else{
-                    //si même produit couleur différente: ajouter nouvel élément
-                        produit.idProduct = idProduct;
-                        produit.nom = nom;
-                        produit.couleur = couleur;
-                        produit.prix = prix;
-                        produit.quantity = 1;
-                        volume.innerHTML = produit.quantity;
-                        panier.push(produit);
-                        localStorage.setItem(idProduct,JSON.stringify(panier));
-                } 
-            }else{
-                produit.quantity = 1;
-                volume.innerHTML = produit.quantity;
-                panier.push(produit);
-                localStorage.setItem(idProduct,JSON.stringify(panier));
-            }
-        } 
+//Récupération des clés du localStorage => articles(array)
+for(let i = 0;i < localStorage.length;i++){
+    let lsKey = localStorage.key(i);
+    articles.push(lsKey)
 }
-    
-  function retraitPanier(){
-
-     //Récupération de la couleur sélectionnée
-        let couleur = document.getElementById("couleur-select").value;
-        let volume = document.getElementById('nombre');
-        if(localStorage.length == 0){
-            console.log('Votre panier est vide');
-        }else{
-            //console.log("Votre panier n'est pas vide");
-            //si le produit est dans le panier
-            if(localStorage.getItem(idProduct));{
-                let panier = JSON.parse(localStorage.getItem(idProduct));
-                let i = colorExists(panier,couleur);
-
-                //si la couleur du produit est dans le panier
-                if(i !==false){ 
-                    //console.log("Ce produit est dans votre panier, et de cette couleur");
-                            if(panier[i]['quantity'] == 1){   
-                                panier.splice(i,1);
-                                volume.innerHTML = 0;
-                                if(panier.length == 0){ 
-                                    localStorage.removeItem(idProduct);
-                                }else{   
-                                    localStorage.setItem(idProduct,JSON.stringify(panier));
-                                }
-                            }else{
-                                volume.innerHTML = panier[i]['quantity']-=1;
-                                localStorage.setItem(idProduct,JSON.stringify(panier));
-                                }
-                            }
-                        }    
-                    } 
-                 }    
-                      
-//teste l'existence du produit dans la couleur sélectionnée        
-   
-    Array.prototype.indexOfObject = function (property, value) {
-        for (var i = 0, len = this.length; i < len; i++) {
-            if (this[i][property] === value) return i; 
-        }
-        return -1;
-    }   
-    //utilisationn de indexOfObject dans la fonction colorExists
-    function colorExists(array,color){
-           if(array && array.indexOfObject("couleur", color) >=0){
-            return array.indexOfObject("couleur", color);
-        }else{
-            return false;
-        }
-    }
-
-function voirPanier(){
-    if(localStorage.length == 0){
-       alert("Votre panier est vide");
-    }else{
-        for(let i = 0;i < localStorage.length;i++){
-        let lsKey = localStorage.key(i);
-        let panier = localStorage.getItem(lsKey);
-        /*panier.push(panier);*/
-        window.location= "panier.html";
-        }
-    }   
+for(let elem of articles){
+    let article = JSON.parse(localStorage.getItem(elem))
+    panier.push(article);
 }
 
-function viderPanier(){
-    volume.innerHTML = 0;
-    window.localStorage.clear();
-    window.sessionStorage.clear();
+
+//Création du tableau récapitulatif
+function tableauRecap(){
+tbody = document.getElementById("tbody");    
+let grandTotal = 0;
+let nbArticles = 0
+for(let elem of panier){
+    for(let ligne of elem){
+        //Récupération des infos par produit
+        let productName = ligne.nom;
+        let productColor = ligne.couleur;
+        let productQty = ligne.quantity;
+        let productPrice = parseInt(ligne.prix);
+        let productTotal = productQty * productPrice;
+        
+        //Création et insertion d'une ligne par article
+        let ligneArticle = document.createElement('tr');
+        tbody.appendChild(ligneArticle);
+            //création d'une colonne par info article
+        let colName = document.createElement('th');
+        let colColor = document.createElement('th');
+        let colQty = document.createElement('th');
+        let colPrice = document.createElement('th');
+        let colTotal = document.createElement('th');
+
+        //Renseignement des infos
+        colName.innerHTML = productName;
+        //colRef .innerHTML = productRef;
+        colColor .innerHTML = productColor;
+        colQty .innerHTML = productQty;
+        colPrice .innerHTML = productPrice.toLocaleString() + " €";
+        colTotal.innerHTML = productTotal.toLocaleString() + " €";
+        //Insertion des colonnes renseignées
+        ligneArticle.appendChild(colName);
+        //ligneArticle.appendChild(colRef);
+        ligneArticle.appendChild(colColor);
+        ligneArticle.appendChild(colQty);
+        ligneArticle.appendChild(colPrice);
+        ligneArticle.appendChild(colTotal); 
+
+        grandTotal = parseInt(grandTotal) + productTotal;
+        nbArticles = nbArticles  + productQty
+    } 
+}  
+let totalAPayer =document.getElementById('total');
+totalAPayer.innerHTML = grandTotal.toLocaleString() + " €";
 }
+
+tableauRecap();
+//bouton de validation du panier ouvrant le formulaire
 function validationPanier(){
     let formulaire = document.getElementById('command');
     if(localStorage.length == 0){

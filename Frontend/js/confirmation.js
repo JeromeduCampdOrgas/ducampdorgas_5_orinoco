@@ -1,7 +1,6 @@
 //Récupération du panier
     let panier = [];
     let articles = [];
-
     //Récupération des clés du localStorage => articles(array)
     for(let i = 0;i < localStorage.length;i++){
         let lsKey = localStorage.key(i);
