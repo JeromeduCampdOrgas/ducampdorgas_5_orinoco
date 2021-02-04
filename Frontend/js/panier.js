@@ -28,7 +28,7 @@
             //Création et insertion d'une ligne par article
             let ligneArticle = document.createElement('tr');
             tbody.appendChild(ligneArticle);
-                //création d'une colonne par info article
+            //création d'une colonne par info article
             let colName = document.createElement('th');
             let colColor = document.createElement('th');
             let colQty = document.createElement('th');
