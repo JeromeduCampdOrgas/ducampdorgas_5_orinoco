@@ -181,8 +181,12 @@ button,#couleur-select{
     width:30px;
     border:1px black solid;
 }
-.submitProduct:hover{
+#ajout:hover{
     background-color:palegreen;
+    font-weight:bold;
+}
+#retrait:hover{
+    background-color:red;
     font-weight:bold;
 }
 #selection{

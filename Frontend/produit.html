@@ -12,7 +12,6 @@
 
     <header id ="banniere">
         <img  id = "logo" src="./images/logo-resize.jpg" alt="Orinoco, vente de produits en ligne, nounours, cameras vintage, meubles en bois">
-        <!--<span id = "nbCart"></span><i class = "fas fa-shopping-cart fa-3x" id = "cart"></i>-->
     </header>  
     <nav>
         <ul>
@@ -37,9 +36,9 @@
                             <div id = "compteurPanier">
                                 <h3>Panier</h3> 
                                 <div id = "boutons">
-                                    <button class = "submitProduct" type="submit" onclick="ajoutPanier()">+</button>
+                                    <button id ="ajout" class = "submitProduct" type="submit" onclick="ajoutPanier()">+</button>
                                     <p id = "nombre" class = "nbCart">0</p>
-                                    <button class = "submitProduct" type="submit" onclick="retraitPanier()">-</button>
+                                    <button id = "retrait" class = "submitProduct" type="submit" onclick="retraitPanier()">-</button>
                                 </div>
                             </div>
                         </div>
