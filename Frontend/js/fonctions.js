@@ -1,6 +1,7 @@
 //Si le panier est vide le lien vers la page est désactivé
     document.getElementById("voirPanier").onclick = function() {
             if(localStorage.length ===0){  
+                alert('Votre panier est vide');
             return false;
          }
         } 
