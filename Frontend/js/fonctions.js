@@ -11,7 +11,7 @@ function getPluriel(nb){
   }
 
 //teste l'existence du produit dans la couleur sélectionnée        
-   
+//ajout d'une propriété à l'objet array afin d'identifier l'index de la propriété visée (ici "couleur")  
 Array.prototype.indexOfObject = function (property, value) {
     for (var i = 0, len = this.length; i < len; i++) {
         if (this[i][property] === value) return i; 

@@ -5,7 +5,7 @@ const idProduct = urlParams.get('id')
 
 //Requete Ajax
 fillNounours();
-  
+
 
 const productName = document.getElementById("productName");
 const productRef = document.getElementById("productRef");
