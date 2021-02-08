@@ -40,8 +40,8 @@
             //colRef .innerHTML = productRef;
             colColor .innerHTML = productColor;
             colQty .innerHTML = productQty;
-            colPrice .innerHTML = productPrice.toLocaleString() + " €";
-            colTotal.innerHTML = productTotal.toLocaleString() + " €";
+            colPrice .innerHTML = productPrice.toFixed(2) + " €";
+            colTotal.innerHTML = productTotal.toFixed(2) + " €";
             //Insertion des colonnes renseignées
             ligneArticle.appendChild(colName);
             //ligneArticle.appendChild(colRef);
@@ -55,7 +55,7 @@
             } 
         }  
         let totalAPayer =document.getElementById('total');
-        totalAPayer.innerHTML = grandTotal.toLocaleString() + " €";
+        totalAPayer.innerHTML = grandTotal.toFixed(2) + " €";
     }
 
     tableauRecap();

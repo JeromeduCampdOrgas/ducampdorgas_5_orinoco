@@ -19,7 +19,7 @@
                     productName.innerHTML = elem.name ;
                     productRef.innerHTML = "ref: " + elem._id;
                     productImg.setAttribute("src",elem.imageUrl);
-                    productPrice.innerHTML = elem.price;
+                    productPrice.innerHTML = (elem.price /100).toFixed(2) + " ";
                     productDescription.innerHTML = "Description: <br>" + elem.description;              
                     personnalisation.innerHTML = "Ce produit est disponible en " + elem.colors.length 
                         + " couleur" + getPluriel(elem.colors.length);

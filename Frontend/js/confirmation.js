@@ -21,7 +21,7 @@ function calculTotal(){
             prixTotal = parseInt(prixTotal) +  total;
         } 
     }
-    document.getElementById('totalMontant').innerHTML = prixTotal + " €"
+    document.getElementById('totalMontant').innerHTML = prixTotal.toFixed(2) + " €"
 }
 calculTotal();
 function idCommand(){
