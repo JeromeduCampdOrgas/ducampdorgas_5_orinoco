@@ -12,8 +12,8 @@
     </header>   
     <nav>
         <ul>
-            <a href = "liste.html"><li >Accueil</li></a>
-            <a href="panier.html"><li >Voir le panier</li></a>
+            <li ><a href = "liste.html">Accueil</a></li>
+            <li ><a href="panier.html">Voir le panier</a></li>
         </ul>
     </nav>
         <Div id ="panier">
@@ -21,24 +21,23 @@
                 <thead>
                     <tr>
                         <th>Nom Produit</th>
-                        <!--<th>Référence</th>-->
                         <th>Couleur</th>
-                        <th>Quantité</th>
+                         <th>Quantité</th>
                         <th>Prix</th>
-                        <th>Total</th>
-                        
+                        <th>Total</th>                      
                     </tr>
                 </thead>
                 <tbody id = "tbody">
 
                 </tbody>
                 <tfoot>
-                    <th></th>
-                    <!--<th></th>-->
-                    <th></th>
-                    <th></th>
-                    <th>Net à payer</th>
-                    <th id = "total"></th>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>Net à payer</th>
+                        <th id = "total"></th>
+                    </tr>
                 </tfoot>
             </table>
             <p id = "nombre"></p>
@@ -53,7 +52,7 @@
         <div id = "renseignements">
             <div id = "civilite">
                 <h2>Renseignements</h2>
-                <label for="civilite">Civilité:</label>
+                <label for="civilite-select">Civilité:</label>
                 <select name="civilite" id="civilite-select" >
                     <option value="monsieur">Monsieur</option>
                     <option value="madame">Madame</option>
@@ -61,10 +60,10 @@
                 </select>
             <br>
 
-                <label for="nom">Nom* :</label>
+                <label for="name">Nom* :</label>
                 <input type="text" name="nom" id = "name" class = "civilite required" placeholder="Nom">
             <br>
-                <label for="Prénom">Prénom* :</label>
+                <label for="firstname">Prénom* :</label>
                 <input type="text"  name="prenom" id = "firstname" class = "civilite required" placeholder="Prénom" >
             <br>
                 <label for="mail">e-mail :</label>
@@ -79,7 +78,7 @@
                 <label for="nVoie"> n° de voie:</label>
                 <input type="text"  name="nVoie" id = "nVoie">
             <br>
-                <label for="rue"></label> Rue*:</label>
+                <label for="rue"> Rue*:</label>
                 <input type="text"  name="rue" id = "rue"  class = "required">
 
             <br>
