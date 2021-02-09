@@ -84,9 +84,6 @@ h1{
     border-radius:15px;
     border:1px black solid;
 }
-.newProduct :hover{
-    transform:scale(1.02);
-}
 
 .product p{
     text-align:left;

@@ -163,7 +163,7 @@
     }
 
     function viderPanier(){
-        volume.innerHTML = 0;
+        nombre.innerHTML = 0;
         window.localStorage.clear();
         window.sessionStorage.clear();
     }
