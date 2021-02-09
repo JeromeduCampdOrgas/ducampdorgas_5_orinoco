@@ -5,7 +5,6 @@ async function fillNounours() {
       .then((response) => response.json()) // will return info, in json format
       .then((nounours) => remplirListeNounours(nounours)) // main code here, using json info
   }
-
   catch(error){
     console.log("oups: " + error)
   }

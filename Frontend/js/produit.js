@@ -1,19 +1,21 @@
-//Récupération de l'id produit dans l'Url
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const idProduct = urlParams.get('id');
+
 
 //Requete Ajax
     fillNounours();
 
     function remplirListeNounours(nounours){
+        //Récupération de l'id produit dans l'Url
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const idProduct = urlParams.get('id');
+
         const productName = document.getElementById("productName");
         const productRef = document.getElementById("productRef");
         const productImg = document.getElementById("productImg");
         const productPrice = document.getElementById("productPrice");
         const productDescription = document.getElementById("productDescription");
         const personnalisation = document.getElementById("personalisation"); 
-
+        //boucle sur les éléments retournés par la requête
             for(let elem of nounours){
                 if(elem._id == idProduct){//si l'id de l'Url correspond à l'id d'un produit 
                     productName.innerHTML = elem.name ;
@@ -23,6 +25,7 @@
                     productDescription.innerHTML = "Description: <br>" + elem.description;              
                     personnalisation.innerHTML = "Ce produit est disponible en " + elem.colors.length 
                         + " couleur" + getPluriel(elem.colors.length);
+                    //recherche du nombre d'options disponibles pour ce produit et création des éléments select
                     for(color of elem.colors){
                         let newOption = document.createElement("option");
                         newOption.setAttribute("value",color);
@@ -37,7 +40,7 @@
         recup();
     }
 
-//Récupération du panier selon produit en cours
+    //Récupération du panier selon produit en cours
     function recup(){
         let panier = [];
         let volume = document.getElementById('nombre');

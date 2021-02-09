@@ -16,7 +16,7 @@
                 newParagraph.innerHTML = elem.name;
                 newImg.setAttribute("src",elem.imageUrl);
                 newImg.setAttribute("class","detailImg");
-                newLien.setAttribute("href", "produit.html?id=" + elem._id);
+                newLien.setAttribute("href", "produit.html?id=" + elem._id);//ajout de l'id produit dans l'url de la page de destination
 
                 const parentLien = document.getElementById("listProducts");
                 parentLien.appendChild(newProduct);
