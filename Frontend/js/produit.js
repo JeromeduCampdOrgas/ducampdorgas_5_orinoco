@@ -163,9 +163,13 @@
     }
 
     function viderPanier(){
+        if(localStorage.length == 0){
+            alert("Votre panier est vide");
+        }else{ 
         nombre.innerHTML = 0;
         window.localStorage.clear();
         window.sessionStorage.clear();
+        }
     }
 
 
