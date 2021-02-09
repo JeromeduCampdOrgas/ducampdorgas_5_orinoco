@@ -76,6 +76,17 @@ function f_valid(){
      }else{
          firstName = prenom.value
      }
+    //validation adresse mail
+    if(!mail.value){
+        email = "xxxxx@xxx.com";
+    }else if(!mail_valid.test(mail.value) && mail.value){
+        erreur_mail.innerHTML = "L'adresse mail n'est pas valide"
+        erreur_mail.style.color = "red";
+        mail.style.background = "red";
+        return false;
+    }else {
+        email = mail.value;
+    }
 //validation du n° de voie
      if(!n_voie_valid.test(n_voie.value)){
          erreur.innerHTML = "Le format de saisie est incorrecte";
@@ -127,15 +138,7 @@ function f_valid(){
      }else{
          city = codePostal + " " + ville.value ;
      }
-//validation adresse mail
-     if(!mail_valid.test(mail.value) && mail.value){
-         erreur_mail.innerHTML = "L'adresse mail n'est pas valide"
-         erreur_mail.style.color = "red";
-         mail.style.background = "red";
-         return false;
-     }else {
-         email = mail.value;
-     }
+
          let address = numero + " " + voie.value;    
          let products = [];
          for(let i = 0;i < localStorage.length;i++){
