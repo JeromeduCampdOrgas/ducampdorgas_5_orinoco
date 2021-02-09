@@ -50,16 +50,17 @@
                                 </select>
                             </p>
                         </div> 
-                        <div >
-                            <button class = "submit" type="submit" onclick="voirPanier()" >Voir le panier</button>
-                            <button class = "submit" onclick = "viderPanier()">Vider panier</button>
-                        </div>
-                    </div>
+
+                    </div> 
+                    <div class = "product">
+                        <p style ="font-weight:bold;">Prix:<span id = "productPrice"></span>€</p>
+                        <p id = "productDescription"></p>  
+                    </div>  
                 </div>
-                <div class = "product">
-                    <p style ="font-weight:bold;">Prix:<span id = "productPrice"></span>€</p>
-                    <p id = "productDescription"></p>
-                    
+                
+                <div id = "achat">
+                    <button class = "submit" type="submit" onclick="voirPanier()" >Voir le panier</button>
+                    <button class = "submit" onclick = "viderPanier()">Vider panier</button>
                 </div>
             </div>
     </section>  

@@ -330,6 +330,10 @@ tfoot {
         justify-content:space-around;
         width:100%;
     }
+    #achat{
+        margin:auto;
+        text-align:center;
+    }
     #footer{
         display:flex;
         flex-direction:row;
