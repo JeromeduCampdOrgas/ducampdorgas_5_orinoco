@@ -1,13 +1,13 @@
-
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const idProduct = urlParams.get('id');
 
 //Requete Ajax
     fillNounours();
 
     function remplirListeNounours(nounours){
         //Récupération de l'id produit dans l'Url
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const idProduct = urlParams.get('id');
+
 
         const productName = document.getElementById("productName");
         const productRef = document.getElementById("productRef");
@@ -87,7 +87,7 @@
         }else{
             if(localStorage.getItem(idProduct)){
                 panier = JSON.parse(localStorage.getItem(idProduct));
-                //Récupération du ré&sulta de colorExists sous forme de variable
+                //Récupération du résultats de colorExists sous forme de variable
                 let i = colorExists(panier,couleur);
 
                 if(i !== false ){
@@ -126,7 +126,7 @@
         let couleur = document.getElementById("couleur-select").value;
         let volume = document.getElementById('nombre');
         if(localStorage.length == 0){
-            console.log('Votre panier est vide');
+           alert('Votre panier est vide');
         }else{
             //console.log("Votre panier n'est pas vide");
             //si le produit est dans le panier

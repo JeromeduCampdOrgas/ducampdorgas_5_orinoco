@@ -1,6 +1,6 @@
 //suite au click sur le bouton de validation du formulaire de commande
 async function validateCart(){   
-    const response = f_valid() //si le formulaire passe la validation =>
+    const response = f_valid() //si le formulaire passe la validation et retourne une réponse valide =>
     sessionStorage.clear();//efface la response "false" de la sessionStorage
     sessionStorage.setItem('client',JSON.stringify(response))       //=> on stocke la réponse
     if(response){
