@@ -30,7 +30,7 @@ function f_valid(){
      let ville = document.getElementById('ville');
      let mail = document.getElementById('mail');
 
-     let nom_valid = /^[a-zA-Zéèîï][a-zéèîïçàô]+([-'\s][a-zA-Zéèîï][a-zéèîïçàô]+)?/ ;
+     let nom_valid = /(?=^.{2,}$)[a-zA-Zéèîï][a-zéèîïçàô]+([-'\s][a-zA-Zéèîï][a-zéèîïçàô]+)?/ ;
      let n_voie_valid = /^([0-9][a-zA-Z][-\s])?/;
      let cp_valid = /[0-9]/;
      let ville_valid = /^[a-zA-Zéèôâûë]+$/;
