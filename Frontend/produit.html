@@ -1,96 +1,102 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
-    <script src ="./js/Ajax.js"></script>
+    <script src="./js/Ajax.js"></script>
     <title>Commande</title>
 </head>
+
 <body>
 
-    <header id ="banniere">
-        <img  id = "logo" src="./images/logo-resize.jpg" alt="Orinoco, vente de produits en ligne, nounours, cameras vintage, meubles en bois">
-    </header>  
+    <header id="banniere">
+        <img id="logo" src="./images/logo-resize.jpg"
+            alt="Orinoco, vente de produits en ligne, nounours, cameras vintage, meubles en bois">
+    </header>
     <nav>
         <ul>
-            <li ><a href = "liste.html">Accueil</a></li>
-            <li><a id = "voirPanier" href="panier.html">Voir le panier</a></li>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a id="voirPanier" href="panier.html">Voir le panier</a></li>
         </ul>
     </nav>
-    <section id = "presProduct">
+    <section id="presProduct">
 
-        <div id = "product">        
-            <h1 id = "productName">_</h1>
-            <p id = "productRef"></p>
-                <div class = "product">
+        <div id="product">
+            <h1 id="productName">_</h1>
+            <p id="productRef"></p>
+            <div class="product">
 
-                    <div id = "gestionPanier">
-                        <div id = "panier">  
-                                    
-                            <div id = "imageProduct">
-                                <img id = "productImg" src="" alt="" style = "height:200px;">
-                            </div>
-                            
-                            <div id = "compteurPanier">
-                                <h3>Panier</h3> 
-                                <div id = "boutons">
-                                    <button id ="ajout" class = "submitProduct" type="submit" onclick="ajoutPanier()">+</button>
-                                    <p id = "nombre" class = "nbCart">0</p>
-                                    <button id = "retrait" class = "submitProduct" type="submit" onclick="retraitPanier()">-</button>
-                                </div>
+                <div id="gestionPanier">
+                    <div id="panier">
+
+                        <div id="imageProduct">
+                            <img id="productImg" src="" alt="" style="height:200px;">
+                        </div>
+
+                        <div id="compteurPanier">
+                            <h3>Panier</h3>
+                            <div id="boutons">
+                                <button id="ajout" class="submitProduct" type="submit"
+                                    onclick="ajoutPanier()">+</button>
+                                <p id="nombre" class="nbCart">0</p>
+                                <button id="retrait" class="submitProduct" type="submit"
+                                    onclick="retraitPanier()">-</button>
                             </div>
                         </div>
-                        <div id = "selection">
-                            <p id = "personalisation"> </p>
-                            <p id = colorSelection>
-                                <label for="couleur-select">Choisissez une couleur:</label>          
-                                <select name="couleur" id="couleur-select"> 
-                                </select>
-                            </p>
-                        </div> 
+                    </div>
+                    <div id="selection">
+                        <p id="personalisation"> </p>
+                        <p id=colorSelection>
+                            <label for="couleur-select">Choisissez une couleur:</label>
+                            <select name="couleur" id="couleur-select">
+                            </select>
+                        </p>
+                    </div>
 
-                    </div> 
-                    <div class = "product">
-                        <p style ="font-weight:bold;">Prix:<span id = "productPrice"></span>€</p>
-                        <p id = "productDescription"></p>  
-                    </div>  
                 </div>
-                
-                <div id = "achat">
-                    <button class = "submit" type="submit" onclick="voirPanier()" >Voir le panier</button>
-                    <button class = "submit" onclick = "viderPanier()">Vider panier</button>
+                <div class="product">
+                    <p style="font-weight:bold;">Prix:<span id="productPrice"></span>€</p>
+                    <p id="productDescription"></p>
                 </div>
             </div>
-    </section>  
-        <footer id = "footer">       
-            <div id ="about" class = "footerElement">
-                <h3>A propos</h3>
-                <ul>
-                    <li><a href="#">Fonctionnement du site</a></li>
-                    <li><a href="#">Conditions générales de vente</a></li>
-                    <li><a href="#">Données et confidentialité</a></li>
-                </ul>
+
+            <div id="achat">
+                <button class="submit" type="submit" onclick="voirPanier()">Voir le panier</button>
+                <button class="submit" onclick="viderPanier()">Vider panier</button>
             </div>
-            
-            <div id ="assistance" class = "footerElement">
-                <h3>Assistance</h3>
-                <ul>
-                    <li><a href="#">Centre d'aide</a></li>
-                    <li><a href="#">Nous contacter</a></li>
-                </ul>
-            </div>
-            <div id ="mentions" class = "footerElement">
-                <ul>
-                    <li><a href="#">Mentions légales</a></li>                  
-                </ul>
-            </div>
-        
+        </div>
+    </section>
+    <footer id="footer">
+        <div id="about" class="footerElement">
+            <h3>A propos</h3>
+            <ul>
+                <li><a href="#">Fonctionnement du site</a></li>
+                <li><a href="#">Conditions générales de vente</a></li>
+                <li><a href="#">Données et confidentialité</a></li>
+            </ul>
+        </div>
+
+        <div id="assistance" class="footerElement">
+            <h3>Assistance</h3>
+            <ul>
+                <li><a href="#">Centre d'aide</a></li>
+                <li><a href="#">Nous contacter</a></li>
+            </ul>
+        </div>
+        <div id="mentions" class="footerElement">
+            <ul>
+                <li><a href="#">Mentions légales</a></li>
+            </ul>
+        </div>
+
     </footer>
-    <script src = "./js/fonctions.js"></script>
-    <script src = "./js/produit.js"></script>
-   
+    <script src="./js/fonctions.js"></script>
+    <script src="./js/produit.js"></script>
+
 
 </body>
+
 </html>
