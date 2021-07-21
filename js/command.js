@@ -114,7 +114,7 @@ function f_valid(e) {
             {
                 document.getElementById("nom").innerHTML = "Yesssssssssssssssssss";
             }
-            xhr.open("POST", 'https://p5backend.netlify.app/api/teddies/order', true);
+            xhr.open("POST", 'http://localhost:3000/api/teddies/order', true);
             xhr.send(JSON.stringify(dataContact));
         }
     }
