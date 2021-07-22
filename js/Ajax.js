@@ -7,5 +7,6 @@ async function fillNounours() {
   }
   catch (error) {
     console.log("oups: " + error)
+    console.log(response)
   }
 }
