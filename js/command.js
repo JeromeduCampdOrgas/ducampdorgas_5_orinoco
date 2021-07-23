@@ -92,15 +92,14 @@ function f_valid(e) {
     }
     //validation adresse mail
     if (!mail_valid.test(mail.value)) {
-        //e.preventDefault();
+        e.preventDefault();
         erreur_mail.innerHTML = "L'adresse mail n'est pas valide"
         erreur_mail.style.color = "red";
         mail.style.background = "red";
-        return false
+
     } else {
         email = mail.value;
     }
-    e.preventDefault();
     let address = numero + " " + voie.value;
     let products = [];
     for (let i = 0; i < localStorage.length; i++) {
