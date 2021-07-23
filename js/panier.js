@@ -24,7 +24,7 @@ function tableauRecap() {
             let productName = ligne.nom;
             let productColor = ligne.couleur;
             let productQty = ligne.quantity;
-            let productPrice = parseInt(ligne.prix) / 100;
+            let productPrice = parseInt(ligne.prix);
             let productTotal = productQty * productPrice;
 
             //Création et insertion d'une ligne par article
