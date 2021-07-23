@@ -1,11 +1,11 @@
 let validation = document.getElementById('bouton_envoi');
 let civilite = document.getElementsByClassName('civilite');
 let nom = document.getElementById('name');
-let prenom = document.getElementById('forname');
+let prenom = document.getElementById('firstname');
 let nom_valid = /^[a-zA-Zéèîï][a-zéèîïçàô]+([-'\s][a-zA-Zéèîï][a-zéèîïçàô]+)?/;
 let n_voie = document.getElementById('nVoie')
 let n_voie_valid = /^([0-9][a-zA-Z][-\s])?/;
-let voie = document.getElementById('voie');
+let voie = document.getElementById('rue');
 let cp = document.getElementById('cp');
 let cp_valid = /^[0-9]$/;
 let ville = document.getElementById('ville');
@@ -25,6 +25,7 @@ function f_valid(e) {
         erreur.innerHTML = " Les champs surlignés sont obligatoires";
         erreur.style.color = "red";
         nom.style.background = "red";
+
     } else if (!nom_valid.test(nom.value)) {
         e.preventDefault();
         erreur.innerHTML = "Le format de saisie est incorrect";
@@ -95,10 +96,10 @@ function f_valid(e) {
         erreur_mail.innerHTML = "L'adresse mail n'est pas valide"
         erreur_mail.style.color = "red";
         mail.style.background = "red";
+
     } else {
         email = mail.value;
     }
-
     let address = numero + " " + voie.value;
     let products = [];
     for (let i = 0; i < localStorage.length; i++) {
@@ -107,7 +108,7 @@ function f_valid(e) {
     let dataContact = {
         firstName, lastName, address, city, email, products
     }
-    console.log(dataContact);
+
     xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
