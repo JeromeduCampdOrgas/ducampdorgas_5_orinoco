@@ -108,7 +108,7 @@ function f_valid(e) {
     let dataContact = {
         firstName, lastName, address, city, email, products
     }
-
+    console.log(dataContact)
     xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
