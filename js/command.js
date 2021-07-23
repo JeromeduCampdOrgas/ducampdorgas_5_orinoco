@@ -109,7 +109,7 @@ function f_valid(e) {
         firstName, lastName, address, city, email, products
     }
     console.log(dataContact)
-    xhr = new XMLHttpRequest();
+    const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
         console.log(xhr);
         console.log(xhr.readyState)
