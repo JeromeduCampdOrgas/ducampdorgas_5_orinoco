@@ -111,6 +111,8 @@ function f_valid(e) {
     console.log(dataContact)
     xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
+        console.log(xhr);
+        console.log(xhr.readyState)
         if (xhr.readyState == 4 && xhr.status == 200) {
             {
                 document.getElementById("nom").innerHTML = "Yesssssssssssssssssss";
