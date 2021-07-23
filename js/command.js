@@ -25,6 +25,7 @@ function f_valid(e) {
         erreur.innerHTML = " Les champs surlignés sont obligatoires";
         erreur.style.color = "red";
         nom.style.background = "red";
+
     } else if (!nom_valid.test(nom.value)) {
         e.preventDefault();
         erreur.innerHTML = "Le format de saisie est incorrect";
@@ -91,10 +92,11 @@ function f_valid(e) {
     }
     //validation adresse mail
     if (!mail_valid.test(mail.value)) {
-        e.preventDefault();
+        //e.preventDefault();
         erreur_mail.innerHTML = "L'adresse mail n'est pas valide"
         erreur_mail.style.color = "red";
         mail.style.background = "red";
+        return false
     } else {
         email = mail.value;
     }
