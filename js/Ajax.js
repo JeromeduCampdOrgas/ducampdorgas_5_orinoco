@@ -6,6 +6,6 @@ async function fillNounours() {
       .then((nounours) => remplirListeNounours(nounours)) // main code here, using json info
   }
   catch (error) {
-    console.log("oups: " + error)
+    console.log("parait qu'il y a une boulette de syntaxe: " + error)
   }
 }
