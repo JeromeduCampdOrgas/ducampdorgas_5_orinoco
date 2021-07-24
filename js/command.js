@@ -114,13 +114,13 @@ function f_valid(e) {
         console.log(xhr);
         console.log(xhr.readyState)
         console.log(xhr.status)
-        if (xhr.readyState == 4 && xhr.status == 200) {
+        /*if (xhr.readyState == 4 && xhr.status == 200) {
             {
                 document.getElementById("nom").innerHTML = "Yesssssssssssssssssss";
-            }
-            xhr.open("POST", 'http://localhost:3000/api/teddies/order', true);
-            xhr.send(JSON.stringify(dataContact));
-        }
+            }*/
+        xhr.open("POST", 'http://localhost:3000/api/teddies/order', true);
+        xhr.send(JSON.stringify(dataContact));
+        //}
     }
 
 
