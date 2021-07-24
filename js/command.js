@@ -110,10 +110,11 @@ function f_valid(e) {
     }
     console.log(dataContact)
     const xhr = new XMLHttpRequest();
+    console.log(xhr);
+    console.log(xhr.readyState)
+    console.log(xhr.status)
     xhr.onreadystatechange = function () {
-        console.log(xhr);
-        console.log(xhr.readyState)
-        console.log(xhr.status)
+
         /*if (xhr.readyState == 4 && xhr.status == 200) {
             {
                 document.getElementById("nom").innerHTML = "Yesssssssssssssssssss";
