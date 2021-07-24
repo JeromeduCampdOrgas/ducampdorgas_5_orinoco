@@ -113,6 +113,7 @@ function f_valid(e) {
     xhr.onreadystatechange = function () {
         console.log(xhr);
         console.log(xhr.readyState)
+        console.log(xhr.status)
         if (xhr.readyState == 4 && xhr.status == 200) {
             {
                 document.getElementById("nom").innerHTML = "Yesssssssssssssssssss";
