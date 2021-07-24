@@ -121,15 +121,15 @@ function f_valid(e) {
             }
             xhr.open("POST", 'http://localhost:3000/api/teddies/order', true);
             xhr.send(JSON.stringify(dataContact));
-            //}
         }
-
-
-
-
-
-
     }
+
+
+
+
+
+
+}
 
 
 
